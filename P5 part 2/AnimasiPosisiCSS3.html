@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: myfirst 5s;
+            -webkit-animation: myfirst 5s;
+        }
+        @keyframes myfirst{
+            0% {background: red; left: 0px; top: 0px;}
+            25% {background: yellow;left: 200px;top: 0px;}
+            50% {background: blue;left: 200px;top: 200px;}
+            75% {background: green;left: 0px; top: 200px;}
+            100%{background: red;left: 0px;top: 0px;}
+        }
+        @-webkit-keyframes myfirst{
+            0% {background: red; left: 0px; top: 0px;}
+            25% {background: yellow;left: 200px;top: 0px;}
+            50% {background: blue;left: 200px;top: 200px;}
+            75% {background: green;left: 0px; top: 200px;}
+            100%{background: red;left: 0px;top: 0px;}  
+        }
+    </style>
+    <title>CSS3 - Animasi Warna & Posisi</title>
+</head>
+<body>
+    <h3>Animasi Warna & Posisi</h3>
+    <div></div>
+</body>
+</html>
