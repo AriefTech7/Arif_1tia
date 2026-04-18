@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Anak Kos</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-family: "Open Sans", roboto;
+        font-size: 50px;
+        color: #f3e4c9;
+      }
+
+      body {
+        background-color: #a98b80;
+      }
+
+      .shape {
+        background: #babf94;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        width: 400px;
+        height: 500px;
+        padding: 20px;
+      }
+
+      .foto img {
+        width: 860px;
+        height: 700px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .foto {
+        display: flex;
+        gap: 25px;
+      }
+
+      .layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .shape p {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        color: #000000;
+        text-align: justify;
+        padding: 15px;
+      }
+      .button input[type="button"] {
+        background-color: #8e977d;
+        color: #000000;
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .layout-button {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Ayam Geprek</h1>
+    <div class="layout-button">
+      <div class="button">
+        <input
+          type="button"
+          value="Back"
+          href="Modul5_HalamanUtama.html"
+          onclick="window.location.href = 'Modul5_HalamanUtama.html'"
+        />
+      </div>
+    </div>
+    <div class="layout">
+      <div class="foto">
+        <img src="ayam geprek.jpeg" alt="Ayam Geprek" />
+        <div class="shape">
+          <p>
+            Ayam geprek menjadi pilihan favorit anak kos karena menawarkan cita
+            rasa pedas gurih yang khas dengan harga yang tetap terjangkau,
+            biasanya mulai dari Rp15.000 hingga Rp20.000 per porsi. Daging ayam
+            yang digoreng tepung crispy lalu digeprek dengan sambal bawang segar
+            tidak hanya menggugah selera, tetapi juga memberikan sensasi pedas
+            yang bisa disesuaikan levelnya, menjadikannya pilihan tepat untuk
+            melepas penat setelah seharian kuliah. Porsinya yang mengenyangkan,
+            dipadukan dengan nasi hangat dan lalapan sederhana, membuatnya
+            sangat cocok untuk makan siang atau malam. Selain itu, warung dan
+            gerobak ayam geprek sangat mudah ditemukan di sekitar kampus maupun
+            kos-kosan, bahkan banyak yang menyediakan layanan pesan antar.
+            Kombinasi antara rasa yang konsisten, harga bersahabat, dan
+            kemudahan mendapatkannya menjadikan ayam geprek sebagai kuliner
+            andalan yang selalu dirindukan anak kos di tengah padatnya jadwal
+            perkuliahan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

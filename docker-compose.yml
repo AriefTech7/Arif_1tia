@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./P5 part 1:/usr/local/apache2/htdocs/
+      - ./P5 part 2:/usr/local/apache2/htdocs/
 
   # Database (Pengganti MySQL di XAMPP)
   db:

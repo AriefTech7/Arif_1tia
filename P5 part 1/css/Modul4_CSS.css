@@ -1,0 +1,64 @@
+h1 {
+    text-align: center;
+    font-family: 'Open Sans', roboto;
+    font-size: 50px;
+    color: #F3E4C9;
+}
+
+body {
+    background-color: #A98B80;
+}
+
+.foto1 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 95px;
+}
+
+.foto2 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foto3 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foto4 {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foto {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+}
+
+section.img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+    background: #BABF94;
+}
+
+.shape {
+    background: #BABF94;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
