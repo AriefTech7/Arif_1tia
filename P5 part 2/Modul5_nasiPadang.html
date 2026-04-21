@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Anak Kos</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-family: "Open Sans", roboto;
+        font-size: 50px;
+        color: #f3e4c9;
+      }
+
+      body {
+        background-color: #a98b80;
+      }
+
+      .shape {
+        background: #babf94;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        width: 400px;
+        height: 500px;
+        padding: 20px;
+      }
+
+      .foto img {
+        width: 860px;
+        height: 700px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .foto {
+        display: flex;
+        gap: 25px;
+      }
+
+      .layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .shape p {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        color: #000000;
+        text-align: justify;
+        padding: 15px;
+      }
+      .button input[type="button"] {
+        background-color: #8e977d;
+        color: #000000;
+        border: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .layout-button {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Nasi Padang</h1>
+    <div class="layout-button">
+      <div class="button">
+        <input
+          type="button"
+          value="Back"
+          href="Modul5_HalamanUtama.html"
+          onclick="window.location.href = 'Modul5_HalamanUtama.html'"
+        />
+      </div>
+    </div>
+    <div class="layout">
+      <div class="foto">
+        <img src="nasi padang.jpeg" alt="Nasi Padang" />
+        <div class="shape">
+          <p>
+            Nasi Padang menjadi favorit anak kos karena menawarkan kombinasi
+            rasa yang kaya rempah, gurih, dan pedas yang mampu menggugah selera
+            di tengah kesibukan kuliah. Dengan sistem bayar "timbang" atau pilih
+            lauk sesuai budget, mahasiswa bisa menyesuaikan pengeluaran mulai
+            dari Rp10.000-an saja, sambil tetap menikmati aneka pilihan seperti
+            rendang, ayam pop, telur balado, atau sayur nangka. Porsinya yang
+            mengenyangkan, ditambah nasi hangat dan sambal hijau yang khas,
+            membuatnya cocok untuk makan siang atau malam setelah seharian
+            beraktivitas. Selain itu, warung Nasi Padang mudah ditemukan di
+            sekitar kampus dan kos-kosan, bahkan banyak yang buka hingga larut
+            malam. Kombinasi antara harga terjangkau, rasa yang konsisten, dan
+            fleksibilitas memilih lauk inilah yang menjadikan Nasi Padang bukan
+            sekadar makanan, tapi bagian dari kenyamanan harian anak kos dalam
+            menjalani masa perkuliahan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
