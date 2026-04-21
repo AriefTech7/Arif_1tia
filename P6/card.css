@@ -1,0 +1,41 @@
+body {
+    background-color: wheat;
+    font-family: cursive;
+
+}
+
+#judul {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    margin: 50px;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px
+}
+
+.card {
+    background-color: darkmagenta;
+    border-radius: 20px;
+    border: 2px solid white;
+
+}
+
+.card img{
+    border-radius: 20px;
+    height: 300px;
+}
+
+.card button{
+    color: red;
+    border-radius: 5px;
+    margin-left: 30px;
+}

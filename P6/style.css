@@ -1,0 +1,21 @@
+body {
+        background-color: gold;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        height: 100vh;
+        
+    }
+      legend {
+        color: rgb(87, 114, 141);
+        font-size: small;
+      }
+      #garis {
+        color: pink;
+      }
+      .gdm {
+        display: flex;
+        justify-content: center;
+        /* margin: 300px; */
+      }
