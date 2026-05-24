@@ -154,60 +154,45 @@
                             <span class="page-icon"><i class="bi bi-table" aria-hidden="true"></i></span>
                             <div>
                                 <p class="eyebrow mb-1">Data</p>
-                                <h1 class="h3 mb-1">Berita</h1>
+                                <h1 class="h3 mb-1">Tables</h1>
+                                <p class="text-muted mb-0">Use responsive, searchable tables for operational records.</p>
                             </div>
                         </div>
 
                     </div>
 
                     <section class="panel">
-                        <div class="panel-header">
-                            <div>
-                                <h2 class="h5 mb-1 section-title"><i class="bi bi-table" aria-hidden="true"></i><span>Table Berita</span></h2>
-                            </div>
-                            <div class="row g-7 text-center">
-                                <div class="col-sm-6 col-md-4">
-                                    <a href="?aksi=tambah" class="btn btn-primary">Tambah</a>
-                                </div>
-                                <div class="col-6 col-md-8">
-                                    <input class="form-control form-control-sm table-search" type="search" placeholder="Search orders" data-table-search="ordersTable" aria-label="Search orders">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table align-middle mb-0" id="ordersTable" data-searchable-table>
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Judul</th>
-                                        <th>Deskripsi</th>
-                                        <th>Foto</th>
-                                        <th>Tanggal</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $no = 1;
-                                    while ($row = mysqli_fetch_assoc($berita)) {
-                                    ?>
-                                        <tr>
-                                            <td><?= $no++; ?></td>
-                                            <td><?= $row['judul']; ?></td>
-                                            <td><?= $row['deskripsi']; ?></td>
 
-                                            <td>
-                                                <img
-                                                    src="public/uploads/<?= $row['foto']; ?>"
-                                                    width="100">
-                                            </td>
-                                            <td><?= $row['tanggal']; ?></td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a></td>
-                                        </tr>
-                                    <?php } ?>
-                                    
-                                </tbody>
-                            </table>
+                        <div class="panel-body p-4">
+                            <form action="?aksi=simpan" method="POST" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label class="form-label">Judul</label>
+                                    <input type="text" name="judul" class="form-control" placeholder="Masukkan judul berita" required>
+
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Deskripsi</label>
+                                    <textarea name="deskripsi" class="form-control" rows="5" placeholder="Masukkan deskripsi berita"
+                                        required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Foto</label>
+                                    <input type="file" name="foto" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Tanggal</label>
+                                    <input type="date" name="tanggal" class="form-control" required>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button type="submit" name="simpan" class="btn btn-primary">
+                                        <i class="bi bi-save"></i>Simpan
+                                    </button>
+                                    <a href="?aksi=index" class="btn btn-secondary">
+                                        <i class="bi bi-arrow-left"></i>
+                                        Kembali
+                                    </a>
+                                </div>
+                            </form>
                         </div>
                     </section>
                 </div>
