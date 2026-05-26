@@ -37,9 +37,41 @@ class BeritaController
     }
     public function edit()
     {
-        $id = $_POST['id'];
-        $this->model->getById($id);
+        $id = $_GET['id'];
+        $berita = $this->model->getById($id);
+        include 'app/views/berita/edit.php';
+    }
+    public function update()
+    {
+        $id=$_POST['id'];
+        $judul=$_POST['judul'];
+        $deskripsi=$_POST['deskripsi'];
+        $tanggal=$_POST['tanggal'];
+        $foto= $_FILES['foto']['name'];
+        $tmp=$_FILES['foto']['tmp_name'];
+
+        if ($foto != ''){
+            move_uploaded_file(
+                $tmp,
+                'public/uploads/'. $foto
+            );
+        }else {
+            $data = $this->model->getById($id);
+            $foto = $data['foto'];
+        }
+        $this->model->update(
+            $id,
+            $judul,
+            $deskripsi,
+            $tanggal,
+            $foto
+        );
         header('Location:index.php');
+    }
+    public function hapus()
+    {
+        $id = $_GET['id'];
+        
     }
 }
 ?>

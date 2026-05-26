@@ -40,4 +40,28 @@ class BeritaModel
         );
         return mysqli_fetch_assoc($query);
     }
+    public function update(
+        $id,
+        $judul,
+        $deskripsi,
+        $tanggal,
+        $foto
+    ) {
+        $query = "UPDATE berita SET
+        judul='$judul',
+        deskripsi='$deskripsi',
+        tanggal='$tanggal',
+        foto='$foto'
+        WHERE id='$id'";
+
+        return mysqli_query(
+            $this->conn,
+            $query
+        );
+    }
+    public function delete($id)
+    {
+        $query="DELETE FROM  berita WHERE id='$id'";
+        return mysqli_query($this->conn, $query);
+    }
 }

@@ -183,7 +183,7 @@
                                         <th>Deskripsi</th>
                                         <th>Foto</th>
                                         <th>Tanggal</th>
-                                        <th></th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -198,11 +198,17 @@
 
                                             <td>
                                                 <img
-                                                    src="public/uploads/<?= $row['foto']; ?>"
+                                                    src="/Arif_1tia/P10/public/uploads/<?= $row['foto']; ?>"
                                                     width="100">
                                             </td>
                                             <td><?= $row['tanggal']; ?></td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a></td>
+                                             <td><?= $row['tanggal']; ?></td>
+                                             <td>
+                                                <a href="?aksi=edit&id=<?= $row['id']; ?>"
+                                                class="btn btn-warning btn-sm">
+                                                <i class="bi bi-pencil-square"></i>
+                                                </a>
+                                             </td>
                                         </tr>
                                     <?php } ?>
                                     

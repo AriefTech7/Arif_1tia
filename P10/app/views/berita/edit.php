@@ -162,35 +162,38 @@
                     </div>
 
                     <section class="panel">
+
                         <div class="panel-body p-4">
-                            <form action="?aksi=simpan" method="POST" enctype="multipart/form-data">
+                            <form action="?aksi=update" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="id" value="<?= $berita['id']; ?>">
                                 <div class="mb-3">
                                     <label class="form-label">Judul</label>
-                                    <input type="text" name="judul" class="form-control" placeholder="Masukkan judul berita" required>
-
+                                    <input type="text" name="judul" class="form-control" value="<?= $berita['judul']; ?>"required>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Deskripsi</label>
-                                    <textarea name="deskripsi" class="form-control" rows="5" placeholder="Masukkan deskripsi berita"
-                                        required></textarea>
+                                    <textarea name="deskripsi" class="form-control" rows="5" required><?= $berita['deskripsi']; ?></textarea>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Foto</label>
+                                    <label class="form-label">Foto Lama</label>
+                                    <img src="/Arif_1tia/P10/public/uploads/<?= $berita['foto']; ?>" width="150" class="img-thumbnail">
+                                </div>  
+                                <div class="mb-3">
+                                    <label class="form-label">Ganti Foto</label>
                                     <input type="file" name="foto" class="form-control">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Tanggal</label>
-                                    <input type="date" name="tanggal" class="form-control" required>
+                                    <input type="date" name="tanggal" class="form-control" value="<?= $berita['tanggal']; ?>" required>
                                 </div>
                                 <div class="d-flex gap-2">
-                                    <button type="submit" name="simpan" class="btn btn-primary">
-                                        <i class="bi bi-save"></i>Simpan
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-save"></i>
+                                        Update
                                     </button>
-                                    <a href="?aksi=index" class="btn btn-secondary">
-                                        <i class="bi bi-arrow-left"></i>
-                                        Kembali
-                                    </a>
+                                    <a href="?aksi=index" class="btn btn-secondary"><i class="bi bi-arrow-left"></i>Kembali</a>
                                 </div>
+                                
                             </form>
                         </div>
                     </section>
