@@ -71,7 +71,20 @@ class BeritaController
     public function hapus()
     {
         $id = $_GET['id'];
-        
+        $data =$this->model->getById($id);
+        if ($data && $data['foto'] != ''){
+            $path_foto = 'public/uploads/'. $data['foto'];  
+            if(file_exists($path_foto)){
+                unlink($path_foto);
+            }
+        }
+        $this->model->delete($id);
+        header('Location:index.php');
+    }
+    public function fronted()
+    {
+        $berita = $this->model->getAll();
+        include 'app/views/frontend/depan.php';
     }
 }
 ?>

@@ -17,6 +17,12 @@ switch ($aksi) {
     case 'update':
         $controller->update();
         break;
+    case 'hapus':
+        $controller->hapus();
+        break;
+    case 'frontend':
+        $controller->fronted();
+        break;
     default:
         $controller->index();
         break;

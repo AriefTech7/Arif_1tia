@@ -208,6 +208,11 @@
                                                 class="btn btn-warning btn-sm">
                                                 <i class="bi bi-pencil-square"></i>
                                                 </a>
+                                                <a href="?aksi=hapus&id=<?php echo $row['id']; ?>"
+                                                class="btn btn-danger btn-sm"
+                                                onclick="return confirm('Apakah anda yakin ingin menghapus berita ini?')">
+                                                <i class="bi bi-trash"></i>
+                                            </a>
                                              </td>
                                         </tr>
                                     <?php } ?>
