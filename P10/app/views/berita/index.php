@@ -180,6 +180,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Judul</th>
+                                        <th>Kategori</th>
                                         <th>Deskripsi</th>
                                         <th>Foto</th>
                                         <th>Tanggal</th>
@@ -194,6 +195,7 @@
                                         <tr>
                                             <td><?= $no++; ?></td>
                                             <td><?= $row['judul']; ?></td>
+                                            <td><?= $row['kategori'] ?></td>
                                             <td><?= $row['deskripsi']; ?></td>
 
                                             <td>
@@ -201,7 +203,6 @@
                                                     src="public/uploads/<?= $row['foto']; ?>"
                                                     width="100">
                                             </td>
-                                            <td><?= $row['tanggal']; ?></td>
                                             <td><?= $row['tanggal']; ?></td>
                                             <td>
                                                 <a href="?aksi=edit&id=<?= $row['id']; ?>"

@@ -19,6 +19,7 @@ class BeritaController
     public function simpan()
     {
         $judul = $_POST['judul'];
+        $kategori = $_POST['kategori'];
         $deskripsi = $_POST['deskripsi'];
         $tanggal = $_POST['tanggal'];
         $foto = $_FILES['foto']['name'];
@@ -29,6 +30,7 @@ class BeritaController
         );
         $this->model->insert(
         $judul,
+        $kategori,
         $deskripsi,
         $foto,
         $tanggal
@@ -45,6 +47,7 @@ class BeritaController
     {
         $id = $_POST['id'];
         $judul = $_POST['judul'];
+        $kategori = $_POST['kategori'];
         $deskripsi = $_POST['deskripsi'];
         $tanggal = $_POST['tanggal'];
         $foto = $_FILES['foto']['name'];
@@ -62,6 +65,7 @@ class BeritaController
         $this->model->update(
             $id,
             $judul,
+            $kategori,
             $deskripsi,
             $tanggal,
             $foto
@@ -92,5 +96,5 @@ class BeritaController
         $berita = $this->model->getById($id);
         include 'app/views/frontend/berita.php';
     }
-  
+    
 }

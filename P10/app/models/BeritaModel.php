@@ -18,14 +18,15 @@ class BeritaModel
     }
     public function insert(
         $judul,
+        $kategori,
         $deskripsi,
         $foto,
         $tanggal
     ) {
         $query = "INSERT INTO berita
-        (judul,deskripsi,foto,tanggal)
+        (judul,kategori,deskripsi,foto,tanggal)
         VALUES
-        ('$judul','$deskripsi',
+        ('$judul','$kategori','$deskripsi',
         '$foto','$tanggal')";
         return mysqli_query(
             $this->conn,
@@ -43,12 +44,14 @@ class BeritaModel
     public function update(
         $id,
         $judul,
+        $kategori,
         $deskripsi,
         $tanggal,
         $foto
     ) {
         $query = "UPDATE berita SET
         judul='$judul',
+        kategori='$kategori',
         deskripsi='$deskripsi',
         tanggal='$tanggal',
         foto='$foto'
