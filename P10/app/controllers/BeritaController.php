@@ -25,7 +25,7 @@ class BeritaController
         $tmp = $_FILES['foto']['tmp_name'];
         move_uploaded_file(
         $tmp,
-        'public/uploads/' . $foto
+        'public/uploads/'.$foto
         );
         $this->model->insert(
         $judul,
@@ -43,19 +43,19 @@ class BeritaController
     }
     public function update()
     {
-        $id=$_POST['id'];
-        $judul=$_POST['judul'];
-        $deskripsi=$_POST['deskripsi'];
-        $tanggal=$_POST['tanggal'];
-        $foto= $_FILES['foto']['name'];
-        $tmp=$_FILES['foto']['tmp_name'];
+        $id = $_POST['id'];
+        $judul = $_POST['judul'];
+        $deskripsi = $_POST['deskripsi'];
+        $tanggal = $_POST['tanggal'];
+        $foto = $_FILES['foto']['name'];
+        $tmp = $_FILES['foto']['tmp_name'];
 
-        if ($foto != ''){
+        if ($foto != '') {
             move_uploaded_file(
                 $tmp,
-                'public/uploads/'. $foto
+                'public/uploads/' . $foto
             );
-        }else {
+        } else {
             $data = $this->model->getById($id);
             $foto = $data['foto'];
         }
@@ -71,10 +71,10 @@ class BeritaController
     public function hapus()
     {
         $id = $_GET['id'];
-        $data =$this->model->getById($id);
-        if ($data && $data['foto'] != ''){
-            $path_foto = 'public/uploads/'. $data['foto'];  
-            if(file_exists($path_foto)){
+        $data = $this->model->getById($id);
+        if ($data && $data['foto'] != '') {
+            $path_foto = 'public/uploads/' . $data['foto'];
+            if (file_exists($path_foto)) {
                 unlink($path_foto);
             }
         }
@@ -86,5 +86,11 @@ class BeritaController
         $berita = $this->model->getAll();
         include 'app/views/frontend/depan.php';
     }
+    public function all()
+    {
+        $id = $_GET['id'];
+        $berita = $this->model->getById($id);
+        include 'app/views/frontend/berita.php';
+    }
+  
 }
-?>

@@ -23,6 +23,9 @@ switch ($aksi) {
     case 'frontend':
         $controller->fronted();
         break;
+    case 'berita':
+        $controller->all();
+        break;
     default:
         $controller->index();
         break;

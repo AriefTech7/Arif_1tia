@@ -2,7 +2,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass='';
-$db = 'bpw_arif';
+$db = 'bpw';
 
 $conn = mysqli_connect($host, $user,$pass,$db);
 if($conn){

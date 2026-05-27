@@ -198,7 +198,7 @@
 
                                             <td>
                                                 <img
-                                                    src="/Arif_1tia/P10/public/uploads/<?= $row['foto']; ?>"
+                                                    src="public/uploads/<?= $row['foto']; ?>"
                                                     width="100">
                                             </td>
                                             <td><?= $row['tanggal']; ?></td>
