@@ -25,7 +25,7 @@
             <?php while($row = mysqli_fetch_assoc($berita)):?>
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="/Arif_1tia/P10/public/uploads/<?= $row['foto']; ?>"
+                        <img src="public/uploads/<?= $row['foto']; ?>"
                         class="card-img-top" alt="<?= $row['judul']; ?>"
                         style="height: 200px; object-fit: cover;">
 
@@ -39,7 +39,7 @@
                             </p>
                         </div>
                         <div class="card-footer bg-white border-0 pb-3">
-                            <a href="#" class="btn btn-outline-primary w-100">Baca Selengkapnya</a>
+                            <a href="?aksi=berita&id=<?= $row['id']; ?>" class="btn btn-outline-primary w-100">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>

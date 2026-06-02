@@ -170,6 +170,18 @@
 
                                 </div>
                                 <div class="mb-3">
+                                    <label class="from-label">Kategori</label>
+                                    <select name="kategori" class="form-select" required>
+                                        <option selected disabled hidden>Pilih salah satu...</option>
+                                        <option value="Politik">Politik</option>
+                                        <option value="Ekonomi & Bisnis">Ekonomi & Bisnis</option>
+                                        <option value="Hukum & Kriminalitas">Hukum & Kriminalitas</option>
+                                        <option value="Olahraga">Olahraga</option>
+                                        <option value="Teknologi & Sains">Teknologi & Sains</option>
+                                        <option value="Gaya Hidup & Hiburan">Gaya Hidup & Hiburan</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
                                     <label class="form-label">Deskripsi</label>
                                     <textarea name="deskripsi" class="form-control" rows="5" placeholder="Masukkan deskripsi berita"
                                         required></textarea>

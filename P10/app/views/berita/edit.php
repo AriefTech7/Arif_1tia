@@ -168,7 +168,19 @@
                                 <input type="hidden" name="id" value="<?= $berita['id']; ?>">
                                 <div class="mb-3">
                                     <label class="form-label">Judul</label>
-                                    <input type="text" name="judul" class="form-control" value="<?= $berita['judul']; ?>"required>
+                                    <input type="text" name="judul" class="form-control" value="<?= $berita['judul']; ?>" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="from-label">Kategori</label>
+                                    <select name="kategori" class="form-select" required>
+                                        <option selected disabled hidden>Pilih salah satu...</option>
+                                        <option value="Politik">Politik</option>
+                                        <option value="Ekonomi & Bisnis">Ekonomi & Bisnis</option>
+                                        <option value="Hukum & Kriminalitas">Hukum & Kriminalitas</option>
+                                        <option value="Olahraga">Olahraga</option>
+                                        <option value="Teknologi & Sains">Teknologi & Sains</option>
+                                        <option value="Gaya Hidup & Hiburan">Gaya Hidup & Hiburan</option>
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Deskripsi</label>
@@ -177,7 +189,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Foto Lama</label>
                                     <img src="/Arif_1tia/P10/public/uploads/<?= $berita['foto']; ?>" width="150" class="img-thumbnail">
-                                </div>  
+                                </div>
                                 <div class="mb-3">
                                     <label class="form-label">Ganti Foto</label>
                                     <input type="file" name="foto" class="form-control">
@@ -193,7 +205,7 @@
                                     </button>
                                     <a href="?aksi=index" class="btn btn-secondary"><i class="bi bi-arrow-left"></i>Kembali</a>
                                 </div>
-                                
+
                             </form>
                         </div>
                     </section>
