@@ -12,6 +12,7 @@ class BeritaController
         $berita = $this->model->getAll();
         include 'app/views/berita/index.php';
     }
+    
     public function tambah()
     {
         include 'app/views/berita/tambah.php';
@@ -96,5 +97,56 @@ class BeritaController
         $berita = $this->model->getById($id);
         include 'app/views/frontend/berita.php';
     }
+    public function user()
+    {
+        $user = $this->model->getUser();
+        include 'app/views/berita/user.php';
+    }
+    public function simpanUser()
+    {
+        $email = $_POST['email'];
+        $nama = $_POST['nama'];
+        $jabatan = $_POST['jabatan'];
+        $password = $_POST['password'];
+        
+        $this->model->insertUser(
+        $email,
+        $nama,
+        $jabatan,
+        $password
+        );
+        header('Location:/Arif_1tia/P10/index.php?aksi=user');
+    }
+    public function tambahUser(){
+        include 'app/views/berita/tambahUser.php';
+    }
+    public function hapusUser()
+    {
+        $id = $_GET['id'];
+        $this->model->deleteUser($id);
+        header('Location:/Arif_1tia/P10/index.php?aksi=user');
+    }
+    public function editUser()
+    {
+        $id = $_GET['id'];
+        $user = $this->model->getByIdUser($id);
+        include 'app/views/berita/editUser.php';
+    }
+    public function updateUser()
+    {
+        $id = $_POST['id_user'];
+        $email = $_POST['email'];
+        $nama = $_POST['nama'];
+        $jabatan = $_POST['jabatan'];
+        $password = $_POST['password'];
     
+        $this->model->updateUser(
+            $id,
+            $email,
+            $nama,
+            $jabatan,
+            $password
+        );
+        header('Location:/Arif_1tia/P10/index.php?aksi=user');
+    }
 }

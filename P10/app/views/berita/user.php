@@ -27,7 +27,7 @@
                 </a>
             </div>
 
-            <nav class="sidebar-nav">
+           <nav class="sidebar-nav">
                 <a class="nav-link" href="index.php">
                     <span class="nav-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
                     <span class="nav-text">Berita</span>
@@ -41,6 +41,7 @@
                     <span class="nav-text">Fitur 3</span>
                 </a>
             </nav>
+
 
             <div class="sidebar-user">
                 <img class="avatar-img avatar-md sidebar-user-avatar" src="public/assets/images/avatar/avatar.jpg" alt="Admin Hasan">
@@ -118,7 +119,7 @@
                             <span class="page-icon"><i class="bi bi-table" aria-hidden="true"></i></span>
                             <div>
                                 <p class="eyebrow mb-1">Data</p>
-                                <h1 class="h3 mb-1">Berita</h1>
+                                <h1 class="h3 mb-1">User</h1>
                             </div>
                         </div>
 
@@ -127,11 +128,11 @@
                     <section class="panel">
                         <div class="panel-header">
                             <div>
-                                <h2 class="h5 mb-1 section-title"><i class="bi bi-table" aria-hidden="true"></i><span>Table Berita</span></h2>
+                                <h2 class="h5 mb-1 section-title"><i class="bi bi-table" aria-hidden="true"></i><span>Table User</span></h2>
                             </div>
                             <div class="row g-7 text-center">
                                 <div class="col-sm-6 col-md-4">
-                                    <a href="?aksi=tambah" class="btn btn-primary">Tambah</a>
+                                    <a href="?aksi=tambahUser" class="btn btn-primary">Tambah</a>
                                 </div>
                                 <div class="col-6 col-md-8">
                                     <input class="form-control form-control-sm table-search" type="search" placeholder="Search orders" data-table-search="ordersTable" aria-label="Search orders">
@@ -143,37 +144,31 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Judul</th>
-                                        <th>Kategori</th>
-                                        <th>Deskripsi</th>
-                                        <th>Foto</th>
-                                        <th>Tanggal</th>
+                                        <th>Id User</th>
+                                        <th>Email</th>
+                                        <th>Nama Lengkap</th>
+                                        <th>Jabatan</th>
+                                        <th>Password</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    while ($row = mysqli_fetch_assoc($berita)) {
+                                    while ($row = mysqli_fetch_assoc($user)) {
                                     ?>
                                         <tr>
                                             <td><?= $no++; ?></td>
-                                            <td><?= $row['judul']; ?></td>
-                                            <td><?= $row['kategori'] ?></td>
-                                            <td><?= $row['deskripsi']; ?></td>
-
+                                            <td><?= $row['email'] ?></td>
+                                            <td><?= $row['nama']; ?></td>
+                                            <td><?= $row['jabatan']; ?></td>
+                                            <td><?= $row['password']; ?></td>
                                             <td>
-                                                <img
-                                                    src="public/uploads/<?= $row['foto']; ?>"
-                                                    width="100">
-                                            </td>
-                                            <td><?= $row['tanggal']; ?></td>
-                                            <td>
-                                                <a href="?aksi=edit&id=<?= $row['id']; ?>"
+                                                <a href="?aksi=editUser&id=<?= $row['id_user']; ?>"
                                                     class="btn btn-warning btn-sm">
                                                     <i class="bi bi-pencil-square"></i>
                                                 </a>
-
+                                            
                                                 <!-- Button trigger modal -->
                                                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                     <i class="bi bi-trash"></i>
@@ -192,7 +187,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                                <a href="?aksi=hapus&id=<?php echo $row['id']; ?>">
+                                                                <a href="?aksi=hapusUser&id=<?php echo $row['id_user']; ?>">
                                                                     <button type="button" class="btn btn-primary">Are you sure?</button>
                                                                 </a>
                                                             </div>

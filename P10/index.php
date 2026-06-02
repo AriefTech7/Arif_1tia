@@ -26,6 +26,24 @@ switch ($aksi) {
     case 'berita':
         $controller->all();
         break;
+    case 'user':
+        $controller->user();
+        break;
+    case 'simpanUser':
+        $controller->simpanUser();
+        break;
+    case 'tambahUser':
+        $controller->tambahUser();
+        break;
+    case 'hapusUser':
+        $controller->hapusUser();
+        break;
+    case 'updateUser':
+        $controller->updateUser();
+        break;
+    case 'editUser':
+        $controller->editUser();
+        break;
     default:
         $controller->index();
         break;

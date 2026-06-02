@@ -6,8 +6,8 @@ $db = 'bpw_arif';
 
 $conn = mysqli_connect($host, $user,$pass,$db);
 if($conn){
-    // echo "koneksi berhasil";
+    echo "koneksi berhasil";
 }else{
-    // echo "koneksi gagal";
+    echo "koneksi gagal";
 }
 ?>

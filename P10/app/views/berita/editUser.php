@@ -28,17 +28,53 @@
             </div>
 
             <nav class="sidebar-nav">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="index.html">
                     <span class="nav-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
-                    <span class="nav-text">Berita</span>
+                    <span class="nav-text">Dashboard</span>
                 </a>
-                <a class="nav-link" href="?aksi=user">
+                <a class="nav-link" href="users.html">
                     <span class="nav-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
                     <span class="nav-text">Users</span>
                 </a>
+                <a class="nav-link" href="add-user.html">
+                    <span class="nav-icon"><i class="bi bi-person-plus" aria-hidden="true"></i></span>
+                    <span class="nav-text">Add User</span>
+                </a>
+                <a class="nav-link" href="profile.html">
+                    <span class="nav-icon"><i class="bi bi-person-badge" aria-hidden="true"></i></span>
+                    <span class="nav-text">Profile</span>
+                </a>
+                <a class="nav-link" href="charts.html">
+                    <span class="nav-icon"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></span>
+                    <span class="nav-text">Charts</span>
+                </a>
+                <a class="nav-link active" href="tables.html" aria-current="page">
+                    <span class="nav-icon"><i class="bi bi-table" aria-hidden="true"></i></span>
+                    <span class="nav-text">Tables</span>
+                </a>
+                <a class="nav-link" href="forms.html">
+                    <span class="nav-icon"><i class="bi bi-ui-checks-grid" aria-hidden="true"></i></span>
+                    <span class="nav-text">Forms</span>
+                </a>
+                <a class="nav-link" href="components.html">
+                    <span class="nav-icon"><i class="bi bi-grid-3x3-gap" aria-hidden="true"></i></span>
+                    <span class="nav-text">Components</span>
+                </a>
+                <a class="nav-link" href="alerts.html">
+                    <span class="nav-icon"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i></span>
+                    <span class="nav-text">Alerts</span>
+                </a>
+                <a class="nav-link" href="modals.html">
+                    <span class="nav-icon"><i class="bi bi-window-stack" aria-hidden="true"></i></span>
+                    <span class="nav-text">Modals</span>
+                </a>
+                <a class="nav-link" href="settings.html">
+                    <span class="nav-icon"><i class="bi bi-gear" aria-hidden="true"></i></span>
+                    <span class="nav-text">Settings</span>
+                </a>
                 <a class="nav-link" href="blank.html">
                     <span class="nav-icon"><i class="bi bi-file-earmark" aria-hidden="true"></i></span>
-                    <span class="nav-text">Fitur 3</span>
+                    <span class="nav-text">Blank Page</span>
                 </a>
             </nav>
 
@@ -118,93 +154,43 @@
                             <span class="page-icon"><i class="bi bi-table" aria-hidden="true"></i></span>
                             <div>
                                 <p class="eyebrow mb-1">Data</p>
-                                <h1 class="h3 mb-1">Berita</h1>
+                                <h1 class="h3 mb-1">Tables</h1>
+                                <p class="text-muted mb-0">Use responsive, searchable tables for operational records.</p>
                             </div>
                         </div>
 
                     </div>
 
                     <section class="panel">
-                        <div class="panel-header">
-                            <div>
-                                <h2 class="h5 mb-1 section-title"><i class="bi bi-table" aria-hidden="true"></i><span>Table Berita</span></h2>
-                            </div>
-                            <div class="row g-7 text-center">
-                                <div class="col-sm-6 col-md-4">
-                                    <a href="?aksi=tambah" class="btn btn-primary">Tambah</a>
+
+                        <div class="panel-body p-4">
+                            <form action="?aksi=updateUser" method="POST" enctype="multipart/form-data">
+                                <input type="hidden" name="id_user" value="<?= $user['id_user']; ?>">
+                                <div class="mb-3">
+                                    <label class="form-label">email</label>
+                                    <input type="text" name="email" class="form-control" value="<?= $user['email']; ?>" required>
                                 </div>
-                                <div class="col-6 col-md-8">
-                                    <input class="form-control form-control-sm table-search" type="search" placeholder="Search orders" data-table-search="ordersTable" aria-label="Search orders">
+                                <div class="mb-3">
+                                    <label class="form-label">Nama Lengkap</label>
+                                    <input type="text" name="nama" class="form-control" value="<?= $user['nama']; ?>" required>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table align-middle mb-0" id="ordersTable" data-searchable-table>
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Judul</th>
-                                        <th>Kategori</th>
-                                        <th>Deskripsi</th>
-                                        <th>Foto</th>
-                                        <th>Tanggal</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $no = 1;
-                                    while ($row = mysqli_fetch_assoc($berita)) {
-                                    ?>
-                                        <tr>
-                                            <td><?= $no++; ?></td>
-                                            <td><?= $row['judul']; ?></td>
-                                            <td><?= $row['kategori'] ?></td>
-                                            <td><?= $row['deskripsi']; ?></td>
+                                <div class="mb-3">
+                                    <label class="form-label">Jabatan</label>
+                                    <input type="text" name="jabatan" class="form-control" value="<?= $user['jabatan']; ?>" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <input type="text" name="password" class="form-control" value="<?= $user['password']; ?>" required>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi bi-save"></i>
+                                        Update
+                                    </button>
+                                    <a href="?aksi=user" class="btn btn-secondary"><i class="bi bi-arrow-left"></i>Kembali</a>
+                                </div>
 
-                                            <td>
-                                                <img
-                                                    src="public/uploads/<?= $row['foto']; ?>"
-                                                    width="100">
-                                            </td>
-                                            <td><?= $row['tanggal']; ?></td>
-                                            <td>
-                                                <a href="?aksi=edit&id=<?= $row['id']; ?>"
-                                                    class="btn btn-warning btn-sm">
-                                                    <i class="bi bi-pencil-square"></i>
-                                                </a>
-
-                                                <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="bi bi-trash"></i>
-                                                </button>
-
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete</h1>
-                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <p>Apakah anda yakin ingin menghapus berita ini?</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                                <a href="?aksi=hapus&id=<?php echo $row['id']; ?>">
-                                                                    <button type="button" class="btn btn-primary">Are you sure?</button>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-
-                                </tbody>
-                            </table>
+                            </form>
                         </div>
                     </section>
                 </div>
