@@ -10,7 +10,7 @@ class UserControllers
     public function user()
     {
         $user = $this->model->getUser();
-        include 'app/views/berita/user.php';
+        include 'app/views/user/user.php';
     }
     public function simpanUser()
     {
@@ -28,7 +28,7 @@ class UserControllers
         header('Location:/Arif_1tia/P10/index.php?aksi=user');
     }
     public function tambahUser(){
-        include 'app/views/berita/tambahUser.php';
+        include 'app/views/user/tambahUser.php';
     }
     public function hapusUser()
     {
@@ -40,7 +40,7 @@ class UserControllers
     {
         $id = $_GET['id'];
         $user = $this->model->getByIdUser($id);
-        include 'app/views/berita/editUser.php';
+        include 'app/views/user/editUser.php';
     }
     public function updateUser()
     {
