@@ -28,7 +28,7 @@
             </div>
 
             <nav class="sidebar-nav">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="?aksi=dashboard">
                     <span class="nav-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
                     <span class="nav-text">Berita</span>
                 </a>

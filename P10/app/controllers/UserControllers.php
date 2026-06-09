@@ -17,7 +17,7 @@ class UserControllers
         $email = $_POST['email'];
         $nama = $_POST['nama'];
         $jabatan = $_POST['jabatan'];
-        $password = $_POST['password'];
+        $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
         
         $this->model->insertUser(
         $email,

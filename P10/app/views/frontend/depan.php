@@ -15,7 +15,9 @@
                 <i class="bi bi-newspaper"></i> Masalah Tempo
             </a>
             <div>
-                <a href="?aksi=index" class="btn btn-light btn-sm">Login Admin</a>
+                <?php if(isset($_SESSION['login'])):?>
+                <a href="?aksi=dashboard" class="btn btn-success">Masuk Ke Dashboard</a><?php else: ?>
+                <a href="?aksi=login" class="btn btn-light btn-sm">Login Admin</a><?php endif; ?>
             </div>
         </div>
     </nav>

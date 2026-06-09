@@ -10,7 +10,7 @@ class BeritaController
     public function index()
     {
         $berita = $this->model->getAll();
-        include 'app/views/berita/index.php';
+        include 'app/views/berita/dashboard.php';
     }
     
     public function tambah()

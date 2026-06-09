@@ -28,14 +28,18 @@
             </div>
 
             <nav class="sidebar-nav">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="?aksi=dashboard">
                     <span class="nav-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
                     <span class="nav-text">Berita</span>
                 </a>
-                <a class="nav-link" href="?aksi=user">
-                    <span class="nav-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
-                    <span class="nav-text">Users</span>
-                </a>
+                
+                <?php if ($_SESSION['jabatan'] === 'admin'): ?>
+                    <?php endif;?> <a class="nav-link" href="?aksi=user">
+                        <span class="nav-icon"><i class="bi bi-windows-stack" aria-hidden="true"></i></span>
+                        <span class="nav-text">User</span>
+                    </a>
+            
+                
                 <a class="nav-link" href="blank.html">
                     <span class="nav-icon"><i class="bi bi-file-earmark" aria-hidden="true"></i></span>
                     <span class="nav-text">Fitur 3</span>
@@ -104,7 +108,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="login.html">Sign out</a></li>
+                                <li><a class="dropdown-item" href="?aksi=logout">Log out</a></li>
                             </ul>
                         </div>
                     </div>

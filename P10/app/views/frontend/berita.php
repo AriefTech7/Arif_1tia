@@ -27,7 +27,6 @@
         </div>
     </nav>
     <div class="container pb-5">
-        <h2 class="fw-bolder font-helvetiva"><?= $berita['judul'] ?></h2>
         <div class="container text-center">
             <div class="row">
                 <div class="col">
@@ -40,6 +39,7 @@
 
         <div class="card" style="margin-top: 30px; ">
             <div class="card-body">
+                <h2 class="fw-bolder font-helvetiva"><?= $berita['judul'] ?></h2>
                 <p class="card-text"><?= $berita['deskripsi'] ?></p>
             </div>
         </div>
